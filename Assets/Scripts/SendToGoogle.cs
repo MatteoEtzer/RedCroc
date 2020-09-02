@@ -23,21 +23,21 @@ public class SendToGoogle : MonoBehaviour {
         form.AddField("entry.1089729749", badewanne);
         
         
-        byte[] rawData = form.data;
-        WWW www = new WWW(BASE_URL, rawData);
-        yield return www;
+        // byte[] rawData = form.data;
+        // WWW www = new WWW(BASE_URL, rawData);
+        // yield return www;
         
-        // UnityWebRequest www = UnityWebRequest.Post(BASE_URL, form);
-        // yield return www.SendWebRequest();
+        UnityWebRequest www = UnityWebRequest.Post(BASE_URL, form);
+        yield return www.SendWebRequest();
 
-        // if (www.isNetworkError)
-        // {
-        //     Debug.Log(www.error);
-        // }
-        // else
-        // {
-        //     Debug.Log("Form upload complete!");
-        // }
+        if (www.isNetworkError)
+        {
+            Debug.Log(www.error);
+        }
+        else
+        {
+            Debug.Log("Form upload complete!");
+        }
     }
     public void Send() {
         Tuerklinke = tuerklinke.GetComponent<InputField>().text;
