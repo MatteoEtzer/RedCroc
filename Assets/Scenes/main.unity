@@ -411,7 +411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tuerklinke: {fileID: 2134036771}
   badewanne: {fileID: 1001106377}
-  BASE_URL: 
+  BASE_URL: https://docs.google.com/forms/u/0/d/e/1FAIpQLSeGQ8OZJqNaPKN5LXVIi-eMA6NAUPF2NG75fgzkqHpDnvMe9w/formResponse
 --- !u!4 &114813626
 Transform:
   m_ObjectHideFlags: 0
